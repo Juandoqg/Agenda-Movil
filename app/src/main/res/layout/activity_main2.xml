@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/cajaBuscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Buscar"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/botonVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="Buscar"
+                android:text="Buscar" />
+
+            <EditText
+                android:id="@+id/cajaNombreVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Escribe tu nombre"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/cajaApellidoVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Escribe tu apellido"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/cajaDocumentoVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Escribe tu documento"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/cajaEdadVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Escribe tu edad"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/cajaTelefonoVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Escribe tu telefono"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/cajaDireccionVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Escribe tu direccion"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/cajaNacimientoVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Escribe tu nacimiento"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/cajaEmailVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Escribe tu email"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/labelEstadoVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estado civil" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupEstadoVer"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cajaSolteroVer"
+                    android:layout_width="193dp"
+                    android:layout_height="match_parent"
+                    android:text="Soltero" />
+
+                <RadioButton
+                    android:id="@+id/cajaCasadoVer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Casado" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/labelGeneroVer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Genero" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGeneroVer"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cajaMasculinoVer"
+                    android:layout_width="193dp"
+                    android:layout_height="match_parent"
+                    android:text="Masculino" />
+
+                <RadioButton
+                    android:id="@+id/cajaFemeninoVer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Femenino" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/labelGustosVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gustos" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkMusicaVer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Musica" />
+
+                <CheckBox
+                    android:id="@+id/checkDeporteVer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Deporte" />
+
+                <CheckBox
+                    android:id="@+id/checkCineVer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cine" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkViajesVer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Viajes" />
+
+                <CheckBox
+                    android:id="@+id/checkComidaVer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Comida" />
+
+                <CheckBox
+                    android:id="@+id/checkLibrosVer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Libros" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/labelSpinnerVer"
+                    android:layout_width="254dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Equipo de futbol favorito" />
+
+                <Spinner
+                    android:id="@+id/spinnerVer"
+                    android:layout_width="241dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/cajaPeliculaVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Pelicula favorito"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/cajaColorVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Color favorito"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/cajaComidaVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Comida favorita"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/cajaLibroVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Libro favorito"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/cajaCancionVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Cancion favorita"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/cajaDescripcionVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Descripcion personal"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/botonVolverVer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="volver"
+                android:text="Volver" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
