@@ -288,6 +288,13 @@
                 android:onClick="modificar"
                 android:text="Modificar" />
 
+            <Button
+                android:id="@+id/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="calculadora"
+                android:text="Calculadora" />
+
         </LinearLayout>
     </ScrollView>
 

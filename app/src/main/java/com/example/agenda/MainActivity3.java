@@ -263,7 +263,7 @@ public class MainActivity3 extends AppCompatActivity {
         cajaDescripcionModi.setText("");
     }
     private boolean validarCampos() {
-        String email = cajaEmailModi.getText().toString().trim();
+
         String nacimiento = cajaNacimientoModi.getText().toString().trim();
 
         if (cajaNombreModi.getText().toString().isEmpty()) {

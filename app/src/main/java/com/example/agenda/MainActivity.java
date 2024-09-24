@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
+import java.util.jar.Manifest;
 
 public class MainActivity extends AppCompatActivity {
     //Trabajo realizado por Juan David Quintero Garcia y Juan Jose Ospina
@@ -159,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean validarCampos() {
-        String email = cajaEmail.getText().toString().trim();
         String nacimiento = cajaNacimiento.getText().toString().trim();
 
         if (cajaNombre.getText().toString().isEmpty()) {
@@ -245,6 +245,13 @@ public class MainActivity extends AppCompatActivity {
         intent2.putExtra("listaUsuarios", listaUsuarios);  // Enviar la lista de usuarios
         startActivityForResult(intent2, REQUEST_CODE_MODIFICAR);
     }
+
+    public void calculadora(View view){
+        Intent intent3 = new Intent(this, MainActivity4.class);
+        startActivity(intent3);
+    }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
