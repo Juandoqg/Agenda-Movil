@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Buscar"
+                android:hint="Correo a buscar"
                 android:inputType="text" />
 
             <Button
@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Escribe tu nombre"
+                android:hint="Nombre"
                 android:inputType="text" />
 
             <EditText
@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Escribe tu apellido"
+                android:hint="Apellido"
                 android:inputType="text" />
 
             <EditText
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Escribe tu documento"
+                android:hint="Documento"
                 android:inputType="number" />
 
             <EditText
@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Escribe tu edad"
+                android:hint="Edad"
                 android:inputType="number" />
 
             <EditText
@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Escribe tu telefono"
+                android:hint="Telefono"
                 android:inputType="number" />
 
             <EditText
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Escribe tu direccion"
+                android:hint="Direccion"
                 android:inputType="text" />
 
             <EditText
@@ -86,7 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Escribe tu nacimiento"
+                android:hint="Nacimiento"
                 android:inputType="date" />
 
             <EditText
@@ -94,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Escribe tu email"
+                android:hint="Email"
                 android:inputType="textEmailAddress" />
 
             <TextView

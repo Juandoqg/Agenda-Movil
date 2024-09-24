@@ -191,11 +191,9 @@ public class MainActivity3 extends AppCompatActivity {
             estado = selectedEstado.getText().toString();
         }
 
-        if (nombre.isEmpty() || apellido.isEmpty() || email.isEmpty() || telefono.isEmpty() || genero.isEmpty()) {
-            Toast.makeText(this, "Por favor, llena todos los campos", Toast.LENGTH_SHORT).show();
-        } else {
-            boolean usuarioModificado = false;
 
+        boolean usuarioModificado = false;
+        if(validarCampos()) {
             for (int i = 0; i < listaUsuarios.size(); i++) {
                 Usuario usuario = listaUsuarios.get(i);
                 // Comparar con el email buscado
@@ -228,16 +226,117 @@ public class MainActivity3 extends AppCompatActivity {
                     listaUsuarios.set(i, usuario);
 
                     usuarioModificado = true;
-                    break;  // Detener la búsqueda una vez que se encontró el usuario
+                    limpiarCampos();
+                    break; // Detener la búsqueda una vez que se encontró el usuario
                 }
             }
-
-            if (usuarioModificado) {
-                Toast.makeText(this, "Usuario modificado correctamente", Toast.LENGTH_LONG).show();
-            } else {
-                Toast.makeText(this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
-            }
         }
+
+        if (usuarioModificado) {
+            Toast.makeText(this, "Usuario modificado correctamente", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void limpiarCampos() {
+        cajaNombreModi.setText("");
+        cajaApellidoModi.setText("");
+        cajaDocumentoModi.setText("");
+        cajaEdadModi.setText("");
+        cajaTelefonoModi.setText("");
+        cajaDireccionModi.setText("");
+        cajaNacimientoModi.setText("");
+        cajaEmailModi.setText("");
+        radioGroupGeneroModi.clearCheck();
+        radioGroupEstadoModi.clearCheck();
+        spinnerModi.setSelection(0);
+        checkCineModi.setChecked(false);
+        checkMusicaModi.setChecked(false);
+        checkDeporteModi.setChecked(false);
+        checkComidaModi.setChecked(false);
+        checkLibrosModi.setChecked(false);
+        checkViajesModi.setChecked(false);
+        cajaPeliculaModi.setText("");
+        cajaColorModi.setText("");
+        cajaComidaModi.setText("");
+        cajaLibroModi.setText("");
+        cajaCancionModi.setText("");
+        cajaDescripcionModi.setText("");
+    }
+    private boolean validarCampos() {
+        String email = cajaEmailModi.getText().toString().trim();
+        String nacimiento = cajaNacimientoModi.getText().toString().trim();
+
+        if (cajaNombreModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo nombre es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaApellidoModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo apellido es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaDocumentoModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo documento es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if (cajaTelefonoModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo teléfono es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaTelefonoModi.getText().length() < 10) {
+            Toast.makeText(this, "El teléfono debe tener al menos 10 dígitos", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (!nacimiento.matches("\\d{2}\\d{2}\\d{4}")) { // Comprueba si el formato es ddmmyyyy
+            Toast.makeText(this, "El formato de nacimiento debe ser ddmmyyyy", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaEdadModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo edad es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaDireccionModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo dirección es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaNacimientoModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo nacimiento es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaEmailModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo email es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(cajaEmailModi.getText().toString()).matches()) {
+            Toast.makeText(this, "El email ingresado no es válido", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if (cajaPeliculaModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo película es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaColorModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo color es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaComidaModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo comida es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaLibroModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo libro es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaCancionModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo canción es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cajaDescripcionModi.getText().toString().isEmpty()) {
+            Toast.makeText(this, "El campo descripción es obligatorio", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 
 
